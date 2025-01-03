@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,18 +14,21 @@
         <div class="content-box">
             <div class="top-section">
                 <img src="./images/GitHub_Lockup_Light.png" alt="Image" class="box-image">
-                <p class="box-text">Besuche mein GitHub-Profil:<br>github.com/marekvonrogall</p>
-                <button class="box-button">GitHub marekvonrogall</button>
+                <div class="box-text-container">
+                    <p class="box-text">Take a look at my GitHub-Profile:</p>
+                    <a href="https://github.com/marekvonrogall" class="box-text link" target="_blank" rel="noopener noreferrer">github.com/marekvonrogall</a>
+                </div>                
+                <button class="box-button" onclick="window.open('https://github.com/marekvonrogall', '_blank')">VISIT GITHUB NOW!</button>
             </div>
             <div class="divider"></div>
             <div class="bottom-section">
-                <a href="page1.html" class="link">Page 1</a>
-                <a href="page2.html" class="link">Page 2</a>
-                <a href="page3.html" class="link">Page 3</a>
+                <a href="#" class="navlink link" onclick="changeContent('projects')">PROJECTS</a>
+                <a href="#" class="navlink link" onclick="changeContent('socials')">SOCIALS</a>
+                <a href="#" class="navlink link" onclick="changeContent('about')">ABOUT</a>
             </div>
         </div>
         <div class="background-content">
-            <p>... vrmarek.me</p>
+            <p id="background-text">... loading content</p>
         </div>
     </div>
     <script src="script.js"></script>

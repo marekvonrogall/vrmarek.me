@@ -1,8 +1,26 @@
+@font-face {
+    font-family: 'W95font';
+    src: url('./fonts/w95font.woff2') format('woff2'),
+         url('./fonts/w95font.woff2') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'W95font';
+    src: url('./fonts/w95font-bold.woff2') format('woff2'),
+         url('./fonts/w95font-bold.woff2') format('woff');
+    font-weight: bold;
+
+}
+
+* {
+    font-family: "W95font", Arial, sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: #4C5844;
-    font-family: Arial, sans-serif;
 }
 
 .navbar {
@@ -14,14 +32,14 @@ body {
 }
 
 .logo {
-    height: 40px;
-    padding-left: 20px;
+    height: 30px;
+    padding-left: 40px;
 }
 
 .main-container {
     background-color: #3E4637;
     margin: 20px;
-    border-radius: 10px;
+    border-radius: 10px 10px 2px 2px;
     overflow: hidden;
     position: relative;
 }
@@ -42,7 +60,7 @@ body {
     background-color: #282E22;
     border-radius: 10px;
     position: relative;
-    height: 200px;
+    height: 140px;
     margin-bottom: 0;
     z-index: 10;
 }
@@ -56,10 +74,19 @@ body {
 
 .box-image {
     height: 40px;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
-.box-text {
+.box-text, .box-text.link{
+    padding: 0px;
+    margin: 0px;
+}
+
+.box-text.link{
+    color: #B3CDC1;
+}
+
+.box-text-container {
     color: #93A18E;
     text-align: center;
     flex-grow: 1;
@@ -71,13 +98,14 @@ body {
     color: #A29F44;
     border: 2px solid #4C5844;
     padding: 5px 10px;
-    margin-right: 20px;
+    margin-right: 40px;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .box-button:hover {
     opacity: 0.9;
+    text-decoration: underline;
 }
 
 .divider {
@@ -92,23 +120,28 @@ body {
 
 .bottom-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-color: black;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     width: 100%;
-    padding: 10px 0;
+    padding: 8px 0px;
     position: relative;
     top: 4px;
     z-index: 5;
     height: 40px;
 }
 
-.link {
+.navlink {
+    padding: 15px;
     color: white;
-    text-decoration: none;
     font-size: 14px;
+    margin: 0 10px;
+}
+
+.link {
+    text-decoration: none;
 }
 
 .link:hover {
