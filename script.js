@@ -43,6 +43,7 @@ function changeContent(section) {
     })
     .then((htmlContent) => {
       backgroundContainer.innerHTML = htmlContent;
+      if(window.location.hash === "#projects") { showSlides(slideIndex); }
       updateTextOnResize();
     })
     .catch((error) => {
@@ -89,44 +90,82 @@ function updateTextOnResize() {
     if (maintenanceText)
       maintenanceText.textContent = "... This site is under construction!";
   }
+  const slides = document.querySelectorAll(".mySlides");
 
-  const beookGithub = document.querySelector("#beook-github");
-  const beookInstaller = document.querySelector("#beook-installer");
-  const beookPortable = document.querySelector("#beook-portable");
-  const beookImage = document.querySelector("#beook-logo");
-  const projectDescriptionBig = document.querySelector(".project-description-big");
-  const projectDescriptionSmall = document.querySelector(".project-description-small");
+  slides.forEach((slide) => {
+    if (slide.style.display === "block") {
+      const leftSection = slide.querySelector(".left-section");
+      const middleSection = slide.querySelector(".middle-section");
+      const rightSection = slide.querySelector(".right-section");
+      const imageSection = slide.querySelector(".image-section");
+      const projectDescriptionBig = slide.querySelector(".project-description-big");
+      const projectDescriptionSmall = slide.querySelector(".project-description-small");
 
-  if(window.innerWidth <= 580) {
-    if (beookGithub) beookGithub.style.display = "block";
-    if (beookInstaller) beookInstaller.style.display = "none";
-    if (beookPortable) beookPortable.style.display = "none";
-    if (beookImage) beookImage.style.display = "none";
-    if (projectDescriptionBig) projectDescriptionBig.style.display = "none";
-    if(projectDescriptionSmall) projectDescriptionSmall.style.display = "block";
-  } else if (window.innerWidth <= 800) {
-    if (beookGithub) beookGithub.style.display = "block";
-    if (beookInstaller) beookInstaller.style.display = "none";
-    if (beookPortable) beookPortable.style.display = "none";
-    if (beookImage) beookImage.style.display = "block";
-    if (projectDescriptionBig) projectDescriptionBig.style.display = "block";
-    if(projectDescriptionSmall) projectDescriptionSmall.style.display = "none";
-  } else if (window.innerWidth <= 1020) {
-    if (beookGithub) beookGithub.style.display = "none";
-    if (beookInstaller) beookInstaller.style.display = "block";
-    if (beookPortable) beookPortable.style.display = "block";
-    if (beookImage) beookImage.style.display = "block";
-    if (projectDescriptionBig) projectDescriptionBig.style.display = "block";
-    if(projectDescriptionSmall) projectDescriptionSmall.style.display = "none";
-  } else {
-    if (beookGithub) beookGithub.style.display = "block";
-    if (beookInstaller) beookInstaller.style.display = "block";
-    if (beookPortable) beookPortable.style.display = "block";
-    if (beookImage) beookImage.style.display = "block";
-    if (projectDescriptionBig) projectDescriptionBig.style.display = "block";
-    if(projectDescriptionSmall) projectDescriptionSmall.style.display = "none";
-  }
+      if (window.innerWidth <= 580) {
+        if (leftSection) leftSection.style.display = "block";
+        if (middleSection) middleSection.style.display = "none";
+        if (rightSection) rightSection.style.display = "none";
+        if (imageSection) imageSection.style.display = "none";
+        if (projectDescriptionBig) projectDescriptionBig.style.display = "none";
+        if (projectDescriptionSmall) projectDescriptionSmall.style.display = "block";
+      } else if (window.innerWidth <= 800) {
+        if (leftSection) leftSection.style.display = "block";
+        if (middleSection) middleSection.style.display = "none";
+        if (rightSection) rightSection.style.display = "none";
+        if (imageSection) imageSection.style.display = "block";
+        if (projectDescriptionBig) projectDescriptionBig.style.display = "block";
+        if (projectDescriptionSmall) projectDescriptionSmall.style.display = "none";
+      } else if (window.innerWidth <= 1020) {
+        if (leftSection) leftSection.style.display = "none";
+        if (middleSection) middleSection.style.display = "block";
+        if (rightSection) rightSection.style.display = "block";
+        if (imageSection) imageSection.style.display = "block";
+        if (projectDescriptionBig) projectDescriptionBig.style.display = "block";
+        if (projectDescriptionSmall) projectDescriptionSmall.style.display = "none";
+      } else {
+        if (leftSection) leftSection.style.display = "block";
+        if (middleSection) middleSection.style.display = "block";
+        if (rightSection) rightSection.style.display = "block";
+        if (imageSection) imageSection.style.display = "block";
+        if (projectDescriptionBig) projectDescriptionBig.style.display = "block";
+        if (projectDescriptionSmall) projectDescriptionSmall.style.display = "none";
+      }
+    }
+  });
 }
 
 window.addEventListener("load", updateTextOnResize);
 window.addEventListener("resize", updateTextOnResize);
+
+let slideIndex = 1;
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  updateTextOnResize();
+}
