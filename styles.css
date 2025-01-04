@@ -81,10 +81,6 @@ body {
   margin: 0px;
 }
 
-.box-text.link {
-  color: #b3cdc1;
-}
-
 .box-text-container {
   color: #93a18e;
   text-align: center;
@@ -134,13 +130,14 @@ body {
 
 .navlink {
   padding: 15px;
-  color: white;
+  color: white !important;
   font-size: 14px;
   margin: 0 10px;
 }
 
 .link {
   text-decoration: none;
+  color: #b3cdc1;
 }
 
 .link:hover {
@@ -197,14 +194,14 @@ body {
   margin: -15px 0;
 }
 
-.error-container {
+.error-container, .maintenance-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 
-.error-image {
+.error-image, .maintenance-image {
   position: absolute;
   bottom: 0;
   right: 40px;
@@ -212,7 +209,24 @@ body {
   width: auto;
 }
 
-.error-text {
+.error-text, .maintenance-text {
   margin-top: 50px;
   margin-left: 20px;
+}
+
+@media (max-width: 700px) {
+  .box-button {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .box-text-container {
+    display: none;
+  }
+}
+
+h3 {
+  margin-top: 0px;
+  margin-bottom: 2px;
 }
