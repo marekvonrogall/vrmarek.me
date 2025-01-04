@@ -24,7 +24,7 @@ function changeContent(section) {
       filePath = "./pages/about.html";
       break;
     case "home":
-      filePath = "./pages/home.html";
+      filePath = "./pages/maintenance.html";
       break;
     case "maintenance":
       filePath = "./pages/maintenance.html";
@@ -83,11 +83,49 @@ function updateTextOnResize() {
   if (window.innerWidth <= 575) {
     if (maintenanceText) maintenanceText.textContent = "... WIP!";
   } else if (window.innerWidth <= 725) {
-    if (maintenanceText) maintenanceText.textContent = "... Under construction!";
+    if (maintenanceText)
+      maintenanceText.textContent = "... Under construction!";
   } else {
-    if (maintenanceText) maintenanceText.textContent = "... This site is under construction!";
+    if (maintenanceText)
+      maintenanceText.textContent = "... This site is under construction!";
   }
-  
+
+  const beookGithub = document.querySelector("#beook-github");
+  const beookInstaller = document.querySelector("#beook-installer");
+  const beookPortable = document.querySelector("#beook-portable");
+  const beookImage = document.querySelector("#beook-logo");
+  const projectDescriptionBig = document.querySelector(".project-description-big");
+  const projectDescriptionSmall = document.querySelector(".project-description-small");
+
+  if(window.innerWidth <= 580) {
+    if (beookGithub) beookGithub.style.display = "block";
+    if (beookInstaller) beookInstaller.style.display = "none";
+    if (beookPortable) beookPortable.style.display = "none";
+    if (beookImage) beookImage.style.display = "none";
+    if (projectDescriptionBig) projectDescriptionBig.style.display = "none";
+    if(projectDescriptionSmall) projectDescriptionSmall.style.display = "block";
+  } else if (window.innerWidth <= 800) {
+    if (beookGithub) beookGithub.style.display = "block";
+    if (beookInstaller) beookInstaller.style.display = "none";
+    if (beookPortable) beookPortable.style.display = "none";
+    if (beookImage) beookImage.style.display = "block";
+    if (projectDescriptionBig) projectDescriptionBig.style.display = "block";
+    if(projectDescriptionSmall) projectDescriptionSmall.style.display = "none";
+  } else if (window.innerWidth <= 1020) {
+    if (beookGithub) beookGithub.style.display = "none";
+    if (beookInstaller) beookInstaller.style.display = "block";
+    if (beookPortable) beookPortable.style.display = "block";
+    if (beookImage) beookImage.style.display = "block";
+    if (projectDescriptionBig) projectDescriptionBig.style.display = "block";
+    if(projectDescriptionSmall) projectDescriptionSmall.style.display = "none";
+  } else {
+    if (beookGithub) beookGithub.style.display = "block";
+    if (beookInstaller) beookInstaller.style.display = "block";
+    if (beookPortable) beookPortable.style.display = "block";
+    if (beookImage) beookImage.style.display = "block";
+    if (projectDescriptionBig) projectDescriptionBig.style.display = "block";
+    if(projectDescriptionSmall) projectDescriptionSmall.style.display = "none";
+  }
 }
 
 window.addEventListener("load", updateTextOnResize);

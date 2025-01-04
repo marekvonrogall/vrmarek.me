@@ -230,3 +230,118 @@ h3 {
   margin-top: 0px;
   margin-bottom: 2px;
 }
+
+.white-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 400px;
+}
+
+.top-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-image {
+  height: 200px;
+  width: auto;
+  margin: 30px;
+}
+
+#beook-description-top, #beook-description-bottom {
+  font-size: 35px;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 30px;
+}
+
+#beook-description-top, #beook-description-top-small {
+  color: black;
+}
+
+#beook-description-bottom, #beook-description-bottom-small {
+  color: #92C630;
+}
+
+.project-description-small {
+  transform: rotate(-90deg);
+  transform-origin: center;
+  position: absolute;
+  bottom: 115px;
+  left: -60px;
+  font-size: 20px;
+}
+
+.right-boxes {
+  display: flex;
+  gap: 20px;
+}
+
+.small-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(to bottom, black, #282e22);
+  border-radius: 10px;
+  padding: 20px;
+  padding-top: 5px;
+  color: white;
+  width: 200px;
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+}
+
+.small-box h2 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.small-box hr {
+  width: 100%;
+  border: 1px solid #93a18e;
+  margin: 10px 0;
+}
+
+.small-box h1 {
+  color: white;
+  font-size: 18px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.small-box p {
+  color: #93a18e;
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: left;
+}
+
+.project-box-button {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid white;
+  cursor: pointer;
+  text-align: center;
+  width: calc(100% - 65px);
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.project-box-button:hover {
+  opacity: 0.9;
+}
+
+.white-text {
+  color: white;
+}
