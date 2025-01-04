@@ -278,10 +278,10 @@ h3 {
 
 .project-description-small {
   transform: rotate(-90deg);
-  transform-origin: center;
-  position: absolute;
-  bottom: 115px;
-  left: -60px;
+  transform-origin: bottom left;
+  position: fixed;
+  bottom: 93px;
+  left: 120px;
   font-size: 20px;
 }
 
