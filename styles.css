@@ -247,7 +247,7 @@ h3 {
 }
 
 .logo-image {
-  height: 200px;
+  height: 190px;
   width: auto;
   margin: 30px;
 }
@@ -279,10 +279,11 @@ h3 {
 .project-description-small {
   transform: rotate(-90deg);
   transform-origin: bottom left;
-  position: fixed;
-  bottom: 93px;
-  left: 120px;
+  position: absolute;
+  left: calc(100vw - 275px);
+  bottom: 20px;
   font-size: 20px;
+  white-space: nowrap;
 }
 
 .right-boxes {

@@ -101,21 +101,21 @@ function updateTextOnResize() {
       const projectDescriptionBig = slide.querySelector(".project-description-big");
       const projectDescriptionSmall = slide.querySelector(".project-description-small");
 
-      if (window.innerWidth <= 580) {
+      if (window.innerWidth <= 585) {
         if (leftSection) leftSection.style.display = "block";
         if (middleSection) middleSection.style.display = "none";
         if (rightSection) rightSection.style.display = "none";
         if (imageSection) imageSection.style.display = "none";
         if (projectDescriptionBig) projectDescriptionBig.style.display = "none";
         if (projectDescriptionSmall) projectDescriptionSmall.style.display = "block";
-      } else if (window.innerWidth <= 800) {
+      } else if (window.innerWidth <= 790) {
         if (leftSection) leftSection.style.display = "block";
         if (middleSection) middleSection.style.display = "none";
         if (rightSection) rightSection.style.display = "none";
         if (imageSection) imageSection.style.display = "block";
         if (projectDescriptionBig) projectDescriptionBig.style.display = "block";
         if (projectDescriptionSmall) projectDescriptionSmall.style.display = "none";
-      } else if (window.innerWidth <= 1020) {
+      } else if (window.innerWidth <= 1015) {
         if (leftSection) leftSection.style.display = "none";
         if (middleSection) middleSection.style.display = "block";
         if (rightSection) rightSection.style.display = "block";
@@ -139,12 +139,10 @@ window.addEventListener("resize", updateTextOnResize);
 
 let slideIndex = 1;
 
-// Next/previous controls
 function plusSlides(n) {
   showSlides((slideIndex += n));
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
