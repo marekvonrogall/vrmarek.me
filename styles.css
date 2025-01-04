@@ -25,7 +25,7 @@ body {
 
 .navbar {
     background-color: black;
-    height: 80px;
+    height: 70px;
     display: flex;
     align-items: center;
     padding: 0 10px;
@@ -50,12 +50,6 @@ body {
     font-size: 14px;
 }
 
-.main-container .background-content img {
-    display: block;
-    margin: 10px auto;
-    width: 100px;
-}
-
 .content-box {
     background-color: #282E22;
     border-radius: 10px;
@@ -74,6 +68,7 @@ body {
 
 .box-image {
     height: 40px;
+    width: auto;
     margin-left: 40px;
 }
 
@@ -146,4 +141,68 @@ body {
 
 .link:hover {
     text-decoration: underline;
+}
+
+.cv-container {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #282E22;
+    border-radius: 10px;
+}
+
+.cv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cv-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.cv-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.cv-dot.pending {
+    background-color: #a25b44;
+}
+
+.cv-dot.in-progress {
+    background-color: #A29F44;
+}
+
+.cv-dot.complete {
+    background-color: #44a255;
+}
+
+.cv-text {
+    color: #93A18E;
+    font-size: 16px;
+}
+
+.cv-line {
+    width: 2px;
+    background-color: #A29F44;
+    height: 30px;
+    margin: -15px 0;
+}
+
+.error-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.error-image {
+    height: 120px;
+    width: auto;
+    margin-right: 20px;
+    margin-bottom: -20px;
 }
