@@ -1,208 +1,218 @@
 @font-face {
-    font-family: 'W95font';
-    src: url('./fonts/w95font.woff2') format('woff2'),
-         url('./fonts/w95font.woff2') format('woff');
-    font-weight: normal;
+  font-family: "W95font";
+  src: url("./fonts/w95font.woff2") format("woff2"),
+    url("./fonts/w95font.woff2") format("woff");
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: 'W95font';
-    src: url('./fonts/w95font-bold.woff2') format('woff2'),
-         url('./fonts/w95font-bold.woff2') format('woff');
-    font-weight: bold;
-
+  font-family: "W95font";
+  src: url("./fonts/w95font-bold.woff2") format("woff2"),
+    url("./fonts/w95font-bold.woff2") format("woff");
+  font-weight: bold;
 }
 
 * {
-    font-family: "W95font", Arial, sans-serif;
+  font-family: "W95font", Arial, sans-serif;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #4C5844;
+  margin: 0;
+  padding: 0;
+  background-color: #4c5844;
 }
-
 .navbar {
-    background-color: black;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
+  background-color: black;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
 }
 
 .logo {
-    height: 30px;
-    padding-left: 40px;
+  height: 30px;
+  padding-left: 40px;
+}
+
+.content-wrapper {
+  padding: 0 20px;
 }
 
 .main-container {
-    background-color: #3E4637;
-    margin: 20px;
-    border-radius: 10px 10px 2px 2px;
-    overflow: hidden;
-    position: relative;
+  background-color: #3e4637;
+  margin: 20px auto;
+  border-radius: 10px 10px 2px 2px;
+  overflow: hidden;
+  position: relative;
+  max-width: 1000px;
 }
 
 .main-container .background-content {
-    padding: 20px;
-    color: #e6e6e6;
-    font-size: 14px;
+  padding: 20px;
+  color: #e6e6e6;
+  font-size: 14px;
 }
 
 .content-box {
-    background-color: #282E22;
-    border-radius: 10px;
-    position: relative;
-    height: 140px;
-    margin-bottom: 0;
-    z-index: 10;
+  background-color: #282e22;
+  border-radius: 10px;
+  position: relative;
+  height: 140px;
+  margin-bottom: 0;
+  z-index: 10;
 }
 
 .top-section {
-    display: flex;
-    align-items: center;
-    height: 70%;
-    position: relative;
+  display: flex;
+  align-items: center;
+  height: 70%;
+  position: relative;
 }
 
 .box-image {
-    height: 40px;
-    width: auto;
-    margin-left: 40px;
+  height: 40px;
+  width: auto;
+  margin-left: 40px;
 }
 
-.box-text, .box-text.link{
-    padding: 0px;
-    margin: 0px;
+.box-text,
+.box-text.link {
+  padding: 0px;
+  margin: 0px;
 }
 
-.box-text.link{
-    color: #B3CDC1;
+.box-text.link {
+  color: #b3cdc1;
 }
 
 .box-text-container {
-    color: #93A18E;
-    text-align: center;
-    flex-grow: 1;
-    font-size: 16px;
+  color: #93a18e;
+  text-align: center;
+  flex-grow: 1;
+  font-size: 16px;
 }
 
 .box-button {
-    background-color: black;
-    color: #A29F44;
-    border: 2px solid #4C5844;
-    padding: 5px 10px;
-    margin-right: 40px;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: black;
+  color: #a29f44;
+  border: 2px solid #4c5844;
+  padding: 5px 10px;
+  margin-right: 40px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .box-button:hover {
-    opacity: 0.9;
-    text-decoration: underline;
+  opacity: 0.9;
+  text-decoration: underline;
 }
 
 .divider {
-    height: 4px;
-    background-color: #4C5844;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 70%;
-    margin: 0;
+  height: 4px;
+  background-color: #4c5844;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70%;
+  margin: 0;
 }
 
 .bottom-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    width: 100%;
-    padding: 8px 0px;
-    position: relative;
-    top: 4px;
-    z-index: 5;
-    height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  padding: 8px 0px;
+  position: relative;
+  top: 4px;
+  z-index: 5;
+  height: 40px;
 }
 
 .navlink {
-    padding: 15px;
-    color: white;
-    font-size: 14px;
-    margin: 0 10px;
+  padding: 15px;
+  color: white;
+  font-size: 14px;
+  margin: 0 10px;
 }
 
 .link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .cv-container {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #282E22;
-    border-radius: 10px;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #282e22;
+  border-radius: 10px;
 }
 
 .cv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cv-item {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
 }
 
 .cv-dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 20px;
 }
 
 .cv-dot.pending {
-    background-color: #a25b44;
+  background-color: #a25b44;
 }
 
 .cv-dot.in-progress {
-    background-color: #A29F44;
+  background-color: #a29f44;
 }
 
 .cv-dot.complete {
-    background-color: #44a255;
+  background-color: #44a255;
 }
 
 .cv-text {
-    color: #93A18E;
-    font-size: 16px;
+  color: #93a18e;
+  font-size: 16px;
 }
 
 .cv-line {
-    width: 2px;
-    background-color: #A29F44;
-    height: 30px;
-    margin: -15px 0;
+  width: 2px;
+  background-color: #a29f44;
+  height: 30px;
+  margin: -15px 0;
 }
 
 .error-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .error-image {
-    height: 120px;
-    width: auto;
-    margin-right: 20px;
-    margin-bottom: -20px;
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+  height: 120px;
+  width: auto;
+}
+
+.error-text {
+  margin-top: 50px;
+  margin-left: 20px;
 }
