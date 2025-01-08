@@ -257,14 +257,14 @@ h3 {
   image-rendering: -moz-crisp-edges;
 }
 
-#beook-description-top, #beook-description-bottom, #carboncraft-description-top, #carboncraft-description-bottom {
+#beook-description-top, #beook-description-bottom, #carboncraft-description-top, #carboncraft-description-bottom, #fsacs-description-top, #fsacs-description-bottom {
   font-size: 35px;
   padding: 0px;
   margin: 0px;
   margin-left: 30px;
 }
 
-#beook-description-top, #beook-description-top-small, #carboncraft-description-top, #carboncraft-description-top-small {
+#beook-description-top, #beook-description-top-small, #carboncraft-description-top, #carboncraft-description-top-small, #fsacs-description-top, #fsacs-description-top-small {
   color: black;
 }
 
@@ -274,6 +274,10 @@ h3 {
 
 #carboncraft-description-bottom, #carboncraft-description-bottom-small {
   color: #e88ce8;
+}
+
+#fsacs-description-bottom, #fsacs-description-bottom-small {
+  color: #e0aa58;
 }
 
 .project-description-small {
