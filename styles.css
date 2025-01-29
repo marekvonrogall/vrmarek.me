@@ -214,6 +214,10 @@ body {
   margin-left: 20px;
 }
 
+#maintenance-subtitle, #error-subtitle {
+  margin-top: 0px;
+}
+
 @media (max-width: 700px) {
   .box-button {
     display: none;

@@ -29,6 +29,9 @@ function changeContent(section) {
     case "maintenance":
       filePath = "./pages/maintenance.html";
       break;
+    case "mapgen-demo":
+      filePath = "./pages/maintenance.html";
+      break;
     default:
       filePath = "ERROR404";
       break;
@@ -66,29 +69,49 @@ function changeContent(section) {
       errorContainer.appendChild(backgroundText);
       errorContainer.appendChild(errorImage);
 
+      const errorSubtitle = document.createElement("h3");
+      errorSubtitle.classList.add("error-text");
+      errorSubtitle.id = "error-subtitle";
+
+      const link = document.createElement("a");
+      link.href = "#projects";
+      link.classList.add("link");
+      link.id = "error-subtitle-a";
+      link.textContent = "Return to projects page";
+
+      errorSubtitle.appendChild(link);
+      
       backgroundContainer.appendChild(errorContainer);
+      backgroundContainer.appendChild(errorSubtitle);
       updateTextOnResize();
     });
 }
 
 function updateTextOnResize() {
   const maintenanceText = document.querySelector(".maintenance-text");
+  const maintenanceSubText = document.querySelector("#maintenance-subtitle-a");
   const errorText = document.querySelector(".error-text");
+  const errorSubText = document.querySelector("#error-subtitle-a");
 
   if (window.innerWidth <= 600) {
     if (errorText) errorText.textContent = "... 404!";
+    if (errorSubText) errorSubText.textContent = "Return";
   } else {
     if (errorText) errorText.textContent = "... 404 page not found!";
+    if (errorSubText) errorSubText.textContent = "Return to projects page";
   }
 
   if (window.innerWidth <= 575) {
     if (maintenanceText) maintenanceText.textContent = "... WIP!";
+    if (maintenanceSubText) maintenanceSubText.textContent = "Go to projects";
   } else if (window.innerWidth <= 725) {
     if (maintenanceText)
       maintenanceText.textContent = "... Under construction!";
+    if (maintenanceSubText) maintenanceSubText.textContent = "Feel free to browse my projects!";
   } else {
     if (maintenanceText)
       maintenanceText.textContent = "... This site is under construction!";
+    if (maintenanceSubText) maintenanceSubText.textContent = "Feel free to browse my projects in the meantime!";
   }
   const slides = document.querySelectorAll(".mySlides");
 
