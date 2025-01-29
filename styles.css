@@ -257,14 +257,14 @@ h3 {
   image-rendering: -moz-crisp-edges;
 }
 
-#beook-description-top, #beook-description-bottom, #carboncraft-description-top, #carboncraft-description-bottom, #fsacs-description-top, #fsacs-description-bottom {
+.description-top, .description-bottom {
   font-size: 35px;
   padding: 0px;
   margin: 0px;
   margin-left: 30px;
 }
 
-#beook-description-top, #beook-description-top-small, #carboncraft-description-top, #carboncraft-description-top-small, #fsacs-description-top, #fsacs-description-top-small {
+.description-top, .description-top-small {
   color: black;
 }
 
@@ -278,6 +278,10 @@ h3 {
 
 #fsacs-description-bottom, #fsacs-description-bottom-small {
   color: #e0aa58;
+}
+
+#mapgen-description-bottom, #mapgen-description-bottom-small {
+  color: #5883e0;
 }
 
 .project-description-small {
