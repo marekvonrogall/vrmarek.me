@@ -166,4 +166,32 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
   updateTextOnResize();
+  ShowProjectDescription(n);
+}
+
+function ShowProjectDescription(n) {
+  const projectDescription = document.getElementById("project-description");
+  let description = "";
+
+  switch (n) {
+    case 1:
+    case 5:
+      description = "Beook Solutions is a tool for Beook, a digital learning platform. It enables access to solutions for coursebooks. Compatible with Beook 9.2.0 or later.";
+      break;
+    case 2:
+      description = "Carbon Craft is a Minecraft mod for the Minecraft 1.20.6 Java Edition. It adds several new blocks and items surrounding the world of steel.";
+      break;
+    case 3:
+      description = "'Mapgen' is a containerized service accessible as a Web API. It generates a bingo board image based on provided parameters. It is part of an in-development Minecraft Bingo Plugin.";
+      break;
+    case 4:
+    case 0:
+      description = "FSA (File Sharing App) Local is an app that allows clients to share files with each other. It's meant to be used within a local network, although the usage across networks is possible.";
+      break;
+    default:
+      description = "Sorry! Either something went wrong or this project has no description.";
+      break;
+  }
+
+  projectDescription.innerHTML = description;
 }
