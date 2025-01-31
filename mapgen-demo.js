@@ -1,4 +1,4 @@
-const serverIP = "http://167.99.130.136";
+const serverIP = "https://api.vrmarek.me";
 
 function updateTeamInputs() {
   const gamemode = document.getElementById("gamemode").value;

@@ -30,7 +30,7 @@ function changeContent(section) {
       filePath = "./pages/maintenance.html";
       break;
     case "mapgen-demo":
-      filePath = "./pages/maintenance.html";
+      filePath = "./pages/mapgen-demo.html";
       break;
     default:
       filePath = "ERROR404";
