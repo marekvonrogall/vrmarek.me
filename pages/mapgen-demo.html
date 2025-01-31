@@ -1,0 +1,42 @@
+<h1>mapgen demo</h1>
+<p>
+  Note: This demo is still work in progress, currently only featuring the 'create'
+  endpoint of the mapgen project.
+</p>
+<br/>
+<div id="mapgen-body">
+  <h3>Config:</h3>
+  <div id="mapgen-config">
+    <label for="gridSize">Grid Size:</label>
+    <input type="number" id="gridSize" min="1" max="7" value="5" />
+    <br />
+    <label for="gamemode">Game Mode:</label>
+    <select id="gamemode">
+      <option value="1P">1P</option>
+      <option value="2P">2P</option>
+      <option value="3P">3P</option>
+      <option value="4P">4P</option>
+    </select>
+    <br />
+    <div id="teamInputs"></div>
+    <br />
+    <label for="difficulty">Difficulty:</label>
+    <select id="difficulty">
+      <option value="very easy">Very Easy</option>
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+      <option value="very hard">Very Hard</option>
+    </select>
+    <br />
+    <button onclick="generateMap()">Generate</button>
+  </div>
+  <h3>Output:</h3>
+  <div id="mapContainer">
+    <h3>Generated Image</h3>
+    <br />
+    <img id="mapImage" alt="Generated Map without completions" />
+    <h3><br /><br />ResponseBody (JSON):</h3>
+  </div>
+  <div id="responseContainer"></div>
+</div>

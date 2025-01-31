@@ -30,7 +30,7 @@ function changeContent(section) {
       filePath = "./pages/maintenance.html";
       break;
     case "mapgen-demo":
-      filePath = "./pages/maintenance.html";
+      filePath = "./pages/mapgen-demo.html";
       break;
     default:
       filePath = "ERROR404";
@@ -48,6 +48,10 @@ function changeContent(section) {
       backgroundContainer.innerHTML = htmlContent;
       if(window.location.hash === "#projects") { showSlides(slideIndex); }
       updateTextOnResize();
+      if(window.location.hash === "#mapgen-demo") {
+        document.getElementById("gamemode").addEventListener("change", updateTeamInputs);
+        updateTeamInputs();
+      }
     })
     .catch((error) => {
       console.error("... error loading content", error);

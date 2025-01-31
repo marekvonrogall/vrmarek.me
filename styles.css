@@ -144,56 +144,6 @@ body {
   text-decoration: underline;
 }
 
-.cv-container {
-  margin-top: 15px;
-  padding: 10px;
-  background-color: #282e22;
-  border-radius: 10px;
-}
-
-.cv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cv-item {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.cv-dot {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin-right: 20px;
-}
-
-.cv-dot.pending {
-  background-color: #a25b44;
-}
-
-.cv-dot.in-progress {
-  background-color: #a29f44;
-}
-
-.cv-dot.complete {
-  background-color: #44a255;
-}
-
-.cv-text {
-  color: #93a18e;
-  font-size: 16px;
-}
-
-.cv-line {
-  width: 2px;
-  background-color: #a29f44;
-  height: 30px;
-  margin: -15px 0;
-}
-
 .error-container, .maintenance-container {
   display: flex;
   align-items: center;
@@ -445,4 +395,84 @@ h3 {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+#mapgen-body {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#mapgen-config {
+  display: grid;
+  grid-template-columns: 4fr 12fr 0fr; 
+  gap: 10px;
+  width: 100%;
+}
+
+#mapgen-config label {
+  justify-self: start;
+  align-self: center;
+  padding: 5px 0;
+}
+
+#mapgen-config input,
+#mapgen-config select,
+#mapgen-config button {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: black;
+  color: #a29f44;
+  border: 2px solid #4c5844;
+  padding: 5px 10px;
+  margin-right: 40px;
+  border-radius: 5px;
+}
+
+#mapgen-config button {
+  cursor: pointer;
+}
+
+#mapgen-config button:hover {
+  opacity: 0.9;
+  text-decoration: underline;
+}
+
+#mapgen-config input {
+  margin: 1px;
+}
+
+#mapgen-config #teamInputs, #mapgen-config button {
+  grid-column: span 2;
+}
+
+#mapContainer {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: none;
+}
+
+#responseContainer {
+  display: none;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  max-height: 500px;
+  overflow-y: auto;
+  background-color: #4c5844;
+}
+
+#mapImage {
+  height: 256px;
+  image-rendering: pixelated;
+  margin-top: 10px;
 }
